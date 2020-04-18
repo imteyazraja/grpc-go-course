@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("Hello From Server")
 	lis, err := net.Listen("tcp", "0.0.0.0:50051")
 	if err != nil {
-		log.Fatal("Failed to listen : %v", err)
+		log.Fatal("Failed to listen  : %v", err)
 	}
 	s := grpc.NewServer()
 	greetpb.RegisterGreetServiceServer(s, &server{})
